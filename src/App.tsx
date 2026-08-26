@@ -34,7 +34,7 @@ const content = {
     solutionsIntro: 'Access the applications and support services that keep remote operations connected.',
     apps: [
       ['Konsulence', 'Financial and business support platform', 'https://konsulence.al'],
-      ['Remote Office Portal', 'Documents, deadlines and payroll in one secure workspace', 'https://portal.remoteoffice.al/login'],
+      ['Remote Office Portal', 'Documents, deadlines and payroll in one secure workspace', 'https://portal.remoteoffice.al'],
       ['Business Workspace', 'A space reserved for your next solution', '#'],
     ],
     comingSoon: 'Coming soon',
@@ -91,7 +91,7 @@ const content = {
     solutionsIntro: 'Aksesoni aplikacionet dhe shërbimet që mbajnë operacionet në distancë të lidhura.',
     apps: [
       ['Konsulence', 'Platformë për mbështetje financiare dhe biznesi', 'https://konsulence.al'],
-      ['Remote Office Portal', 'Dokumentet, afatet dhe listëpagesat në një hapësirë të sigurt', 'https://portal.remoteoffice.al/login'],
+      ['Remote Office Portal', 'Dokumentet, afatet dhe listëpagesat në një hapësirë të sigurt', 'https://portal.remoteoffice.al'],
       ['Business Workspace', 'Një hapësirë për zgjidhjen tuaj të ardhshme', '#'],
     ],
     comingSoon: 'Së shpejti',
