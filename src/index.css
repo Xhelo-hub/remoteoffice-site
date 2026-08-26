@@ -1,9 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Brand tokens — RemoteOffice Brand Guidelines v1.0 (Gusht 2026), page 7. The PDF is the source of truth. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('/assets/fonts/inter-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/assets/fonts/space-grotesk-latin.woff2') format('woff2');
+}
 
-:root { font-family: 'Inter', 'Segoe UI', sans-serif; color: #163b68; background: #f3f5f8; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+:root {
+  --color-primary: #1D4E89;
+  --color-primary-dark: #163B68;
+  --color-accent: #C9A227;
+  --color-accent-text: #8A6D1F;
+  --color-bg: #F3F5F8;
+  --color-surface: #FFFFFF;
+  --color-border: #E2E7EE;
+  --color-text: #1A2332;
+  --color-text-muted: #5B6B7F;
+  --color-success: #15803D;
+  --color-warning: #A16207;
+  --color-danger: #B91C1C;
+  --color-on-primary: #FFFFFF;
+  --font-ui: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Space Grotesk', var(--font-ui);
+  --shadow-sm: 0 1px 3px rgba(22, 59, 104, 0.08);
+  --radius: 10px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #0E131A;
+    --color-surface: #161C25;
+    --color-border: #26303D;
+    --color-primary: #4F8FE0;
+    --color-text: #E8EDF3;
+    --color-text-muted: #9AA8B8;
+    --color-accent-text: #C9A227;
+    --color-success: #34C26B;
+    --color-on-primary: #0E131A;
+    color-scheme: dark;
+  }
+}
+[data-theme='dark'] {
+  --color-bg: #0E131A;
+  --color-surface: #161C25;
+  --color-border: #26303D;
+  --color-primary: #4F8FE0;
+  --color-text: #E8EDF3;
+  --color-text-muted: #9AA8B8;
+  --color-accent-text: #C9A227;
+  --color-success: #34C26B;
+  --color-on-primary: #0E131A;
+  color-scheme: dark;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; }
+body {
+  margin: 0;
+  min-width: 320px;
+  font: 400 16px/1.625 var(--font-ui);
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
 button, input, textarea { font: inherit; }
 a { color: inherit; }
 #root { min-height: 100vh; }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+
+/* Dates, amounts and deadlines are the core content — always tabular. */
+.num, .amount, .date, .deadline, td.numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
